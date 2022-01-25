@@ -1,0 +1,42 @@
+:root{
+    --my-color1:hsla(206, 100%, 25%, 0.639);
+    --my-color2:#00eeffb3;
+    --spacing:2em;
+    --size:300px;
+    --my-name:"Kamal Senet";
+}
+.header{
+color: brown !important;/* this is bang important but its not recommended*/
+}
+#header-id{
+    color: aquamarine;
+}
+.custom{
+    background-color: var(--my-color2);
+    color: var(--my-color1);
+    margin-left: var(--spacing);
+}
+.first-para{
+    background-color:bisque;
+    width: var(--size);
+}
+.second-para{
+background-color: cadetblue;
+color: azure;
+/* width: calc(100% - 300px); */
+width: calc(100% - 2*var(--size));
+}
+.container .first-para,.second-para{
+    float: left;
+}
+.address::after{
+    content: var(--my-name);
+}
+/* CSS advanced selectors   */
+div[class*="blue"]{
+    background-color: aqua;
+} 
+
+data:hover::after{
+    content: ' (ID ' attr(value) ' ) ';
+}
